@@ -2,7 +2,7 @@ fetch("https://discord.com/api/v9/channels/850322813285695508/messages", {
   "headers": {
     "accept": "*/*",
     "accept-language": "en-US",
-    "authorization": "ODgyNjc5NjI5OTA1ODA1MzY0.YTqqqg.A6AkCQyEfsINmpM4RZAgYK5CCSM",
+    "authorization": "TOKEN",
     "content-type": "application/json",
     "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\"",
     "sec-ch-ua-mobile": "?0",
