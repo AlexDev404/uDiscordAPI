@@ -1,3 +1,7 @@
+# SEND MESSAGE
+
+```JS
+
 fetch("https://discord.com/api/v9/channels/850322813285695508/messages", {
   "headers": {
     "accept": "*/*",
@@ -21,4 +25,4 @@ fetch("https://discord.com/api/v9/channels/850322813285695508/messages", {
   "mode": "cors",
   "credentials": "include"
 });
-
+```
