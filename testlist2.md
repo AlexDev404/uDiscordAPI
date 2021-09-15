@@ -1,6 +1,6 @@
 # SEND MESSAGE
 
-
+```JS
 fetch("https://discord.com/api/v9/channels/882680156576153676/messages", {
   "headers": {
     "accept": "*/*",
@@ -27,9 +27,13 @@ fetch("https://discord.com/api/v9/channels/882680156576153676/messages", {
 
 ### nonce = rand(17)
 
+```
+
 ---------
 
 # EDIT/DELETE MESSAGE - TO DELETE CHANGE REQUEST METHOD FROM POST TO DELETE
+
+```JS
 
 fetch("https://discord.com/api/v9/channels/882680156576153676/messages/887762879179276339", {
   "headers": {
@@ -54,9 +58,11 @@ fetch("https://discord.com/api/v9/channels/882680156576153676/messages/887762879
   "mode": "cors",
   "credentials": "include"
 });
+```
 
 # RESET PASSWORD
 
+```JS
 fetch("https://discord.com/api/v9/auth/reset", {
   "headers": {
     "accept": "*/*",
@@ -80,9 +86,11 @@ fetch("https://discord.com/api/v9/auth/reset", {
   "mode": "cors",
   "credentials": "include"
 });
+```
 
 # TELEMETRY
 
+```JS
 fetch("https://discord.com/api/v9/science", {
   "headers": {
     "accept": "*/*",
@@ -106,4 +114,4 @@ fetch("https://discord.com/api/v9/science", {
   "mode": "cors",
   "credentials": "include"
 });
-
+```
