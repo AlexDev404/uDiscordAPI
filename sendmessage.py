@@ -6,7 +6,7 @@ import time
 
 # SET RAIDMODE ON OR OFF
 
-RAIDMODE = True
+RAIDMODE = False
 
 
 def retMode():
@@ -25,6 +25,89 @@ if not authToken:
     exit(-1)
 
 message = input("TYPE MESSAGE: ")
+
+# EMBED REFERENCE FROM: https://discord.com/developers/docs/resources/channel#embed-object
+# ICON USED: https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png
+# VIDEO USED: https://www.youtube.com/watch?v=jn9TqFUyWiM
+
+embed = [
+    {
+        "title": "Title",
+        "type": "rich",
+        "description": "Body",
+      #  "url": "https://example.com",
+        "author": {
+            "name": "Test",
+            "url": "https://example.com",
+            "icon_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "proxy_icon_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png"
+
+        },
+        "fields": [
+            {
+                "name": "Test Field",
+                "value": "Placeholder",
+                "inline": "false",
+            }
+        ],
+        "provider": {
+            "name": "Provider Name",
+            "url": "https://example.com"
+        },
+        "video": {
+            "url": "https://www.youtube.com/watch?v=jn9TqFUyWiM",
+            "proxy_url": "https://www.youtube.com/watch?v=jn9TqFUyWiM",
+            "height": 900,
+            "width": 900,
+        },
+        "image": {
+            "url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "proxy_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "height": 900,
+            "width": 900
+        },
+        "thumbnail": {
+            "url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "proxy_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "height": 500,
+            "width": 500
+        },
+        "footer": {
+            "text": "FOOTER TEXT",
+            "icon_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png",
+            "proxy_icon_url": "https://cdn2.iconfinder.com/data/icons/search-engine-optimization-33/32/seo-06-512.png"
+        },
+        "color": 0x0400ff,
+    }
+]
+components = [
+    {
+        "type": 1,
+        "components": [
+            {
+                "type": 2,
+                "style": 5,
+                "label": "More information",
+                "url": "https://rythm.fm/"
+            },
+            {
+                "type": 2,
+                "style": 1,
+                "label": "Sign up for Rythm newsletter",
+                "custom_id": "newsletter-signup",
+                "hash": ""
+            },
+            {
+                "type": 2,
+                "style": 5,
+                "label": "Support us on Patreon",
+                "url": "https://patreon.com/rythm"
+            }
+        ]
+    }
+]
+
+
 # tts = input("TTS? (true OR false): ")
 
 
@@ -35,6 +118,8 @@ def id_generator(size=17, chars=string.ascii_uppercase + string.digits):
 def genBody(message, tts):
     body = {
         "content": message,
+        "embeds": embed,
+        #        "components": components,   - NOT WORKING
         "nonce": id_generator(17, "1234567890"),
         "tts": tts
     }
@@ -55,6 +140,7 @@ url_base = 'https://discord.com/api/v9/channels/'
 url_id = input("CHANNEL ID: ")
 url = "".join(url_base + url_id + "/messages")
 print(url)
+
 
 # Use the 'headers' parameter to set the HTTPS headers:
 # bodyjson = json.dumps(genBody())
@@ -79,9 +165,10 @@ def sendMessage():
         print("Sent as: ")
         print(resjson["author"]["username"] + "#" + resjson["author"]["discriminator"] + "\n")
 
-
-    # print(resjson) -- DEBUG
+    # print(bodyjson)
+    # print(resjson)
     time.sleep(0.05)
+
 
 while RAIDMODE:
     sendMessage()
