@@ -1,0 +1,44 @@
+embed=discord.Embed(title="List of Available Commands :", color=0x0400ff)
+embed.set_author(name="Help")
+embed.add_field(name="Hunt", value="For Hunting", inline=False)
+embed.add_field(name="Fish", value="For Fishing", inline=False)
+embed.add_field(name="Help", value="For Help", inline=False)
+embed.add_field(name="Dance", value="Just For Fun :)", inline=False)
+
+
+[{
+    "type": "rich",
+    "title": "5 years and counting...",
+    "description": "To comply with a notice we received from Youtube - Rythm has ended its service. But don’t kick us out yet! This isn’t the end for us. We're working on something brand new in the music space that will revolutionize how we all listen to music. For more information about what we’re working on in the coming months, subscribe to our newsletter by clicking the button below!\n\nThank you everyone for an amazing 5 years. It’s been incredible for us as a team to watch Rythm grow to over 20 million communities, connecting people all around the world and bringing joy to so many people. We know Discord won't be the same without Rythm and are so glad we were able to go on this journey with you. We hope you'll continue to be part of our journey as we work on our next project.\n\nIf you would like to support Rythm’s future and receive early updates, check out our Patreon page or [join our Discord community](https://discord.gg/rythm). Your support will help us create the future of music listening! :heart:\n\nStay tuned, this is not the end.\n- ImBursting, creator of Rythm <:rythmsmall:886182821754966026>"
+}]
+
+# COMPONENTS
+
+ODgyNjc5NjI5OTA1ODA1MzY0.jj5tuSUSpJWsPEkScFsy0d0W_h0
+
+[
+    {
+        "type": 1,
+        "components": [
+            {
+                "type": 2,
+                "style": 5,
+                "label": "More information",
+                "url": "https://rythm.fm/"
+            },
+            {
+                "type": 2,
+                "style": 1,
+                "label": "Sign up for Rythm newsletter",
+                "custom_id": "newsletter-signup",
+                "hash": ""
+            },
+            {
+                "type": 2,
+                "style": 5,
+                "label": "Support us on Patreon",
+                "url": "https://patreon.com/rythm"
+            }
+        ]
+    }
+]
