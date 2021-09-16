@@ -1,5 +1,6 @@
 # REQUEST MESSAGES
 
+```JS
 fetch("https://discord.com/api/v9/channels/882680156576153676/messages?limit=50", {
   "headers": {
     "accept": "*/*",
@@ -21,6 +22,6 @@ fetch("https://discord.com/api/v9/channels/882680156576153676/messages?limit=50"
   "mode": "cors",
   "credentials": "include"
 });
-
+```
 
 https://discord.com/api/v9/channels/${CHANNEL_ID}/messages?limit=X
