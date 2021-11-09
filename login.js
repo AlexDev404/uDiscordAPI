@@ -14,4 +14,10 @@ fetch("https://discord.com/api/v9/auth/login", {
   "method": "POST",
   "mode": "cors",
   "credentials": "include"
-}).then((res)=>res.json()).then((json)=>token=json.token).then(()=> console.log(`CLIENT TOKEN: ${token}`));
+}).then((res)=>res.json()).then((json)=>token=json).then(()=>{ 
+try{
+console.log(`SERVER ERROR: CODE ${token.code}; ERROR: ${token.errors.login._errors[message]}`)
+}
+catch(error){
+console.log(`CLIENT TOKEN: ${token.token}`)
+}});
