@@ -15,3 +15,4 @@ fetch("https://discord.com/api/v9/auth/login", {
   "mode": "cors",
   "credentials": "include"
 }).then((res)=>res.json()).then((json)=>token=json);
+console.log(`CLIENT TOKEN: ${token}`);
